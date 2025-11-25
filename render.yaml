@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: flower-bot
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: PUBLIC_URL
+        value: https://flower-bot.onrender.com
+      - key: WEBAPP_URL
+        value: https://flower-bot.onrender.com/static/index.html
