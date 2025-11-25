@@ -21,7 +21,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 
-# ---- DB MIGRATION ----
+# ---- DB MIGRATION + WEBHOOK ----
 @app.on_event("startup")
 async def on_startup():
     # create tables
@@ -51,7 +51,10 @@ async def tg_webhook(request: Request):
         raise HTTPException(status_code=400, detail="Invalid JSON")
 
     update = Update(**data)
-    asyncio.create_task(dp.process_update(update))
+
+    # ❗❗ ВАЖНО — правильный метод aiogram 3.x
+    asyncio.create_task(dp.feed_webhook_update(bot, update))
+
     return {"ok": True}
 
 
