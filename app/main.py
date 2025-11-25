@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from aiogram.types import Update
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi.responses import FileResponse
 
 from .db import Base, engine, get_db
 from .models import Product, CartItem
@@ -20,6 +21,10 @@ app = FastAPI()
 # ---- STATIC FILES ----
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
+
+@app.get("/")
+async def root():
+    return FileResponse(os.path.join("app", "static", "index.html"))
 
 # ---- DB MIGRATION + WEBHOOK ----
 @app.on_event("startup")
