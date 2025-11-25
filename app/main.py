@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 # ---- STATIC FILES ----
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 
 # ---- DB MIGRATION + WEBHOOK ----
