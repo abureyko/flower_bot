@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flower Bot — Магазин</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="/">Flower<span>Bot</span></a>
+      <div class="actions">
+        <button id="cart-btn" class="btn icon">🧺 <span id="cart-count">0</span></button>
+        <a id="open-telegram" class="btn primary" href="#" target="_blank">Открыть в Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Свежие букеты и растения</h1>
+      <p>Красивые композиции для любого случая — быстрый заказ через Telegram.</p>
+    </section>
+
+    <section id="products" class="grid"></section>
+  </main>
+
+  <!-- Cart drawer -->
+  <aside id="cart" class="cart">
+    <div class="cart-header">
+      <h3>Корзина</h3>
+      <button id="close-cart" class="btn">✖</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total">Итого: <span id="cart-total">0</span> ₽</div>
+      <button id="checkout" class="btn primary">Оформить</button>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
