@@ -7,21 +7,23 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL not defined")
 
-# Render → заменяем postgres:// на postgresql+asyncpg://
-if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+asyncpg://")
+# Force asyncpg
+DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+asyncpg://")
+DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://")
 
-engine = create_async_engine(DATABASE_URL, echo=False)
+engine = create_async_engine(
+    DATABASE_URL,
+    echo=False,
+)
 
 async_session = async_sessionmaker(
-    engine,
+    bind=engine,
     expire_on_commit=False,
     class_=AsyncSession
 )
 
 Base = declarative_base()
 
-# Для FastAPI зависимостей
 async def get_db():
     async with async_session() as session:
         yield session
