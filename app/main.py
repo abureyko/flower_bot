@@ -8,6 +8,7 @@ from aiogram.types import Update
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi.responses import FileResponse
+from .seed import load_products
 
 from .db import Base, engine, get_db
 from .models import Product, CartItem
@@ -20,7 +21,7 @@ app = FastAPI()
 
 # ---- STATIC FILES ----
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
-
+app.mount("/products", StaticFiles(directory="app/products"), name="products")
 
 @app.get("/")
 async def root():
