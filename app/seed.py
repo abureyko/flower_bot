@@ -17,7 +17,7 @@ async def load_products():
             return
 
         # читаем JSON
-        with open("app/products/products.json", "r", encoding="utf-8") as f:
+        with open("app/static/products/products.json", "r", encoding="utf-8") as f:
             products = json.load(f)
 
         for p in products:
