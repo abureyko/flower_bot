@@ -125,7 +125,7 @@ async function fetchProducts(){
     products = await res.json();
     if(!Array.isArray(products) || products.length === 0) {
       products = [{
-        id:1,title:"Букет «Рассвет»",price:1299,description:"Сборный букет из пионов и роз",image:"/static/products/photo_2025-11-26 11.28.40.jpeg"
+        id:1,title:"Букет «Рассвет»",price:1299,description:"Сборный букет из пионов и роз",image:"app/products/photo_2025-11-26 11.28.40.jpeg"
       }]
     }
   }catch(e){
