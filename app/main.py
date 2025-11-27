@@ -21,7 +21,7 @@ app = FastAPI()
 
 # ---- STATIC FILES ----
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
-app.mount("/products", StaticFiles(directory="app/products"), name="products")
+app.mount("/products", StaticFiles(directory="app/static/products"), name="products")
 
 @app.get("/")
 async def root():
@@ -30,16 +30,20 @@ async def root():
 # ---- DB MIGRATION + WEBHOOK ----
 @app.on_event("startup")
 async def on_startup():
-    # create tables
+    # создаём таблицы
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
+    # загружаем товары (только если их нет)
+    await load_products()
+
+    # ставим вебхук
     public = os.getenv("PUBLIC_URL")
     if public:
         webhook_url = f"{public}/tg_webhook"
         await bot.set_webhook(webhook_url)
         logger.info("Webhook set: %s", webhook_url)
-    else:
+    else:   
         logger.warning("PUBLIC_URL is not set. Webhook will not work.")
 
 
