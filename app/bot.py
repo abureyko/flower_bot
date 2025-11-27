@@ -38,6 +38,6 @@ async def fallback(msg: types.Message):
     elif "помощ" in text:
         await msg.answer("Напиши /start чтобы начать заново.")
     elif "менеджер" in text:
-        await msg.answer("Связь с менеджером: @SSIRRISS")
+        await msg.answer("Связь с менеджером: @neremiz")
     else:
         await msg.answer("Команду не понял. Нажми /start.")
