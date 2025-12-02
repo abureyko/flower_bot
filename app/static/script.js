@@ -6,7 +6,6 @@ const cartItemsEl = document.getElementById("cart-items");
 const cartCount = document.getElementById("cart-count");
 const cartTotal = document.getElementById("cart-total");
 const toast = document.getElementById("toast");
-const openTelegram = document.getElementById("open-telegram");
 
 let products = [];
 let cart = JSON.parse(localStorage.getItem("cart_v1")) || [];
@@ -123,19 +122,11 @@ async function fetchProducts(){
     const res = await fetch(API);
     if(!res.ok) throw new Error("no products");
     products = await res.json();
-    if(!Array.isArray(products) || products.length === 0) {
-      products = [{
-        id:1,title:"Букет «Рассвет»",price:1299,description:"Сборный букет из пионов и роз",image:"/static/products/photo_2025-11-26 11.28.40.jpeg"
-      }]
-    }
-  }catch(e){
-    // fallback demo products
-    products = [
-      {id:101,title:"Букет «Рассвет»",price:1299,description:"Сборный из пионов и роз",image:"https://picsum.photos/seed/1/800/600"},
-      {id:102,title:"Монстера в горшке",price:2199,description:"Зелёное крупное растение",image:"https://picsum.photos/seed/2/800/600"},
-      {id:103,title:"Мини-таблица",price:599,description:"Небольшой букет в коробке",image:"https://picsum.photos/seed/3/800/600"}
-    ];
-  }
+}catch(e){
+    products = [];
+    showToast("Не удалось загрузить товары");
+}
+
   renderProducts();
   renderCart();
 }
@@ -143,10 +134,6 @@ async function fetchProducts(){
 function init(){
   saveCart();
   fetchProducts();
-  // Подставляем ссылку для открытия webapp в Telegram
-  // WEBAPP_URL берётся с env в bot — но сюда можно подставить прямую ссылку:
-  const webapp = window.location.origin;
-  openTelegram.href = `https://t.me/your_bot_username?startweb=${encodeURIComponent(webapp)}`;
 }
 
 init();

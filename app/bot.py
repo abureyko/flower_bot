@@ -13,8 +13,6 @@ WEBAPP_URL = os.getenv("WEBAPP_URL", "https://example.com")
 bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
 dp = Dispatcher()
 
-
-# ✔️ Правильный фильтр для двух команд
 @dp.message(Command(commands=["start", "help"]))
 async def cmd_start(msg: types.Message):
     kb = ReplyKeyboardMarkup(
