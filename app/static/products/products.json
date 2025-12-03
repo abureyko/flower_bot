@@ -3,13 +3,13 @@
     "title": "Розы белые",
     "price": 2500,
     "description": "Классический букет свежих белых роз",
-    "image": "/products/розы белые.jpeg"
+    "image": "/products/розы_белые.jpeg"
   },
   {
     "title": "Голубая гортензия",
     "price": 1900,
     "description": "Пышный букет из голубой гортензии",
-    "image": "/products/голубая гортензия.jpeg"
+    "image": "/products/голубая_гортензия.jpeg"
   },
   {
     "title": "Оранжевые розы",
@@ -51,6 +51,6 @@
     "title": "Лилии",
     "price": 4500,
     "description": "Великолепный букет из белых лилий",
-    "image": "/products/photo_2025-11-26 11.28.57.jpeg"
+    "image": "/products/лилии.jpeg"
   }
 ]
