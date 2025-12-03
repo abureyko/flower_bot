@@ -1,62 +1,56 @@
 [
   {
-    "title": "Букет 1",
+    "title": "Розы белые",
     "price": 2500,
-    "description": "Классический букет свежих красных роз.",
-    "image": "/products/photo_2025-11-26 11.28.35.jpeg"
+    "description": "Классический букет свежих белых роз",
+    "image": "/products/розы белые.jpeg"
   },
   {
-    "title": "Букет 2",
+    "title": "Голубая гортензия",
     "price": 1900,
-    "description": "Яркий весенний микс из разноцветных тюльпанов.",
-    "image": "/products/photo_2025-11-26 11.28.39.jpeg"
+    "description": "Пышный букет из голубой гортензии",
+    "image": "/products/голубая гортензия.jpeg"
   },
   {
-    "title": "Букет 3",
+    "title": "Оранжевые розы",
     "price": 3200,
-    "description": "Нежный ароматный букет из розовых пионов.",
-    "image": "/products/photo_2025-11-26 11.28.42.jpeg"
+    "description": "Яркий букет из оранжевых роз",
+    "image": "/products/оранжевые_розы.jpeg"
   },
   {
-    "title": "Букет 4",
+    "title": "Розы красные",
     "price": 3800,
-    "description": "Букет 5",
-    "image": "/products/photo_2025-11-26 11.28.44.jpeg"
+    "description": "Элегантный букет из красных роз",
+    "image": "/products/розы_красные.jpeg"
   },
   {
-    "title": "Букет 5",
+    "title": "Альстромерии микс",
     "price": 1700,
-    "description": "Лёгкий, нежный, летний букет из ромашек.",
-    "image": "/products/photo_2025-11-26 11.28.46.jpeg"
+    "description": "Нежный букет из пышных альстромерий",
+    "image": "/products/альстромерия.jpeg"
   },
   {
-    "title": "Букет 6",
+    "title": "Эустома",
     "price": 2100,
-    "description": "Сочный яркий букет из разноцветных гербер.",
-    "image": "/products/photo_2025-11-26 11.28.49.jpeg"
+    "description": "Свежий букет из эустомы",
+    "image": "/products/эустома.jpeg"
   },
   {
-    "title": "Букет 7",
+    "title": "Подсолнухи",
     "price": 2400,
-    "description": "Элегантный букет белых роз премиум категории.",
-    "image": "/products/photo_2025-11-26 11.28.52.jpeg"
+    "description": "Яркий букет из свежих подсолнухов",
+    "image": "/products/подсолнухи.jpeg"
   },
   {
-    "title": "Букет 8",
+    "title": "Ирисы",
     "price": 1600,
-    "description": "Пышный, свежий букет кустовых хризантем.",
-    "image": "/products/photo_2025-11-26 11.28.54.jpeg"
+    "description": "Красивый букет из ярких ирисов",
+    "image": "/products/ирисы.jpeg"
   },
   {
-    "title": "Букет 9",
+    "title": "Лилии",
     "price": 4500,
-    "description": "Большая подарочная корзина свежих цветов.",
+    "description": "Великолепный букет из белых лилий",
     "image": "/products/photo_2025-11-26 11.28.57.jpeg"
-  },
-  {
-    "title": "Букет 10",
-    "price": 11500,
-    "description": "Роскошный, премиальный букет — 101 свежая роза.",
-    "image": "/products/photo_2025-11-26 11.28.59.jpeg"
   }
 ]
