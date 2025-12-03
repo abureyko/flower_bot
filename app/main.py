@@ -21,7 +21,6 @@ app = FastAPI()
 
 # ---- STATIC FILES ----
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
-app.mount("/products", StaticFiles(directory="app/static/products"), name="products")
 
 @app.get("/")
 async def root():
