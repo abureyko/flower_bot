@@ -12,9 +12,9 @@ async def load_products():
         result = await session.execute(select(Product))
         existing = result.scalars().all()
 
-        if existing:
-            print("Товары уже есть — пропуск.")
-            return
+        #if existing:
+            #print("Товары уже есть — пропуск.")
+            #return
 
         # читаем JSON
         with open("app/static/products/products.json", "r", encoding="utf-8") as f:
