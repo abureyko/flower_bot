@@ -3,54 +3,54 @@
     "title": "Розы белые",
     "price": 2500,
     "description": "Классический букет свежих белых роз",
-    "image": "/products/розы_белые.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Голубая гортензия",
     "price": 1900,
     "description": "Пышный букет из голубой гортензии",
-    "image": "/products/голубая_гортензия.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Оранжевые розы",
     "price": 3200,
     "description": "Яркий букет из оранжевых роз",
-    "image": "/products/оранжевые_розы.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Розы красные",
     "price": 3800,
     "description": "Элегантный букет из красных роз",
-    "image": "/products/розы_красные.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Альстромерии микс",
     "price": 1700,
     "description": "Нежный букет из пышных альстромерий",
-    "image": "/products/альстромерия.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Эустома",
     "price": 2100,
     "description": "Свежий букет из эустомы",
-    "image": "/products/эустома.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Подсолнухи",
     "price": 2400,
     "description": "Яркий букет из свежих подсолнухов",
-    "image": "/products/подсолнухи.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Ирисы",
     "price": 1600,
     "description": "Красивый букет из ярких ирисов",
-    "image": "/products/ирисы.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   },
   {
     "title": "Лилии",
     "price": 4500,
     "description": "Великолепный букет из белых лилий",
-    "image": "/products/лилии.jpeg"
+    "image": "static/products/розы_белые.jpeg"
   }
 ]
