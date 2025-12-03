@@ -15,7 +15,7 @@
     "title": "Оранжевые розы",
     "price": 3200,
     "description": "Яркий букет из оранжевых роз",
-    "image": "static/products/рoranzhevye_rozy.jpg"
+    "image": "static/products/oranzhevye_rozy.jpg"
   },
   {
     "title": "Розы красные",
@@ -33,7 +33,7 @@
     "title": "Эустома",
     "price": 2100,
     "description": "Свежий букет из эустомы",
-    "image": "static/products/eustoma.jpgg"
+    "image": "static/products/eustoma.jpg"
   },
   {
     "title": "Подсолнухи",
