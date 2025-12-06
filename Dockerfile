@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "alembic upgrade head && python -m flower_bot.seed_run && uvicorn flower_bot.main:app --host 0.0.0.0 --port 10000"]
+CMD ["sh", "-c", "alembic upgrade head && python -m fseed_run.py && uvicorn flower_bot.main:app --host 0.0.0.0 --port 10000"]
