@@ -9,7 +9,7 @@ class Product(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False, index=True)
     description = Column(Text)
-    price = Column(Integer, nullable=False)
+    price = Column(Float, nullable=False)
     image = Column(String, nullable=False)
 
 class CartItem(Base):

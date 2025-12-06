@@ -29,11 +29,8 @@ async def root():
 # ---- DB MIGRATION + WEBHOOK ----
 @app.on_event("startup")
 async def on_startup():
-    # создаём таблицы
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
 
-    # загружаем товары (только если их нет)
+    # загружаем товары
     await load_products()
 
     # ставим вебхук
